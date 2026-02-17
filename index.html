@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Tue Feb 17 2026 17:02:44 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Tue Feb 17 2026 23:07:16 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="6965575ca1f91b0b9ee5aab9" data-wf-site="696540255d12a3651f323d03">
 <head>
   <meta charset="utf-8">
@@ -6,6 +6,7 @@
   <meta content="At Scribble &amp; Scribe, we seek to turn the mundane into magnificent. Turn to-do lists into ta-da! Find stationery that is an extension of your personal style." name="description">
   <meta content="Scribble &amp; Scribe" property="og:title">
   <meta content="At Scribble &amp; Scribe, we seek to turn the mundane into magnificent. Turn to-do lists into ta-da! Find stationery that is an extension of your personal style." property="og:description">
+  <meta content="https://cdn.prod.website-files.com/696540255d12a3651f323d03/6994e54bcc9194309e6de45e_scribble%20and%20scribe%20open_graph.png" property="og:image">
   <meta content="Scribble &amp; Scribe" property="twitter:title">
   <meta content="At Scribble &amp; Scribe, we seek to turn the mundane into magnificent. Turn to-do lists into ta-da! Find stationery that is an extension of your personal style." property="twitter:description">
   <meta property="og:type" content="website">
@@ -29,6 +30,10 @@
   .ipad-shape {
     pointer-events: none;
   }
+  .palette-swatch.palette-swatch-active {
+  border: 3px solid #fff;
+  box-shadow: 0 2px 15px .8em #fff;
+  }
 </style>
     </div>
     <div class="main-wrapper">
@@ -43,7 +48,7 @@
           </div>
         </div>
         <div class="container-w2 gutter-outside">
-          <div class="tablet-mockup-animation">
+          <div id="tablet-mockup" class="tablet-mockup-animation">
             <div data-w-id="92a4921c-d8ad-d95e-0020-a6aa7708b8a3" class="_3d-tablet-wrap">
               <div class="_3d-tablet-inner">
                 <div class="ipad-mockup">
@@ -76,6 +81,24 @@ canvas {
               </div>
             </div>
           </div>
+          <div class="palette-container">
+            <div class="palette-swatch black"></div>
+            <div class="palette-swatch navy"></div>
+            <div class="palette-swatch pink"></div>
+            <div class="palette-swatch teal"></div>
+            <div class="palette-swatch red"></div>
+            <div class="palette-swatch gold"></div>
+            <div class="palette-swatch green"></div>
+            <div class="palette-swatch palette-swatch-random"></div>
+          </div>
+          <div class="div-block">
+            <div class="div-block-2">
+              <a id="undo-button" href="#" class="button-primary undo w-button">undo</a>
+              <a id="redo-button" href="#" class="button-primary undo w-button">redo</a>
+              <a id="erase-button" href="#" class="button-primary erase w-button">erase all</a>
+            </div>
+            <a id="screen-shot-button" href="#" class="button-primary screenshot w-button">Screenshot &amp; Share</a>
+          </div>
         </div>
       </section>
       <div class="navbar-logo-left">
@@ -84,7 +107,7 @@ canvas {
             <div class="navbar-wrapper">
               <a href="#" class="navbar-brand w-nav-brand"><img src="images/65ce92edd545b5430252870b_ScribbleScribe_Logo.webp" loading="lazy" alt="" class="image inverted"></a>
               <nav role="navigation" class="nav-menu-wrapper w-nav-menu">
-                <a href="#" class="nav-link">Home</a>
+                <a href="index.html" aria-current="page" class="nav-link w--current">Home</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="#gallery" class="nav-link">Gallery</a>
                 <div class="nav-divider"></div>
@@ -101,9 +124,10 @@ canvas {
       <div class="tab-sections">
         <div class="tab-wrap">
           <div class="header-wrap">
-            <div><img src="images/65ce92edd545b5430252870b_ScribbleScribe_Logo.webp" loading="lazy" alt="" class="image inverted"></div>
+            <div><img src="images/65ce92edd545b5430252870b_ScribbleScribe_Logo.webp" loading="lazy" alt="" class="image inverted large"></div>
             <div id="about" class="about-block">
-              <p class="tab-header-paragraph">Perfectly Personalized for You<br><br>At Scribble &amp; Scribe, we seek to turn the mundane into magnificent. Turn to-do lists into ta-da! Find stationery that is an extension of your personal style. Use writing tools that make you smile. Our mission is to make quality stationery and accessories that you’re proud to display, send and scribble on. <span class="text-span">Find the scribe within you. </span></p>
+              <p class="tab-header-paragraph">Perfectly Personalized for You<br><br>At Scribble &amp; Scribe, we seek to turn the mundane into magnificent. Turn to-do lists into ta-da! Find stationery that is an extension of your personal style. Use writing tools that make you smile. Our mission is to make quality stationery and accessories that you’re proud to display, send and scribble on. <a href="#scribble"><span class="text-span">Find the scribe within you. </span></a>
+              </p>
             </div>
           </div>
           <div class="css w-embed">
@@ -114,9 +138,9 @@ canvas {
   }
 </style>
           </div>
-          <div id="gallery" data-duration-in="300" data-duration-out="100" data-current="Tab 1" data-easing="ease" class="tabs w-tabs">
+          <div id="gallery" data-duration-in="300" data-duration-out="100" data-current="Tab 2" data-easing="ease" class="tabs w-tabs">
             <div class="tabs__menu w-tab-menu">
-              <a data-w-tab="Tab 1" class="tab-link w-inline-block w-tab-link w--current">
+              <a data-w-tab="Tab 1" class="tab-link w-inline-block w-tab-link">
                 <div class="tab-title-wrap">
                   <div class="highlight-text-wrap">
                     <div class="highlight"></div>
@@ -127,7 +151,7 @@ canvas {
                   <p class="tab-paragraph">Organize your day, organize your life.</p>
                 </div>
               </a>
-              <a data-w-tab="Tab 2" class="tab-link w-inline-block w-tab-link">
+              <a data-w-tab="Tab 2" class="tab-link w-inline-block w-tab-link w--current">
                 <div class="tab-title-wrap">
                   <div data-w-id="fd66367c-5fde-939e-cbd1-6edf6abfe2ac" class="highlight-text-wrap">
                     <div style="width:0%" class="highlight"></div>
@@ -151,11 +175,11 @@ canvas {
               </a>
             </div>
             <div class="tabs__content w-tab-content">
-              <div data-w-tab="Tab 1" class="tabs__pane w-tab-pane w--tab-active">
+              <div data-w-tab="Tab 1" class="tabs__pane w-tab-pane">
                 <div data-delay="4000" data-animation="slide" class="slider w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
                   <div class="w-slider-mask">
-                    <div class="w-slide"><img sizes="(max-width: 1500px) 100vw, 1500px" srcset="images/LWB2016W1_01-p-500.jpg 500w, images/LWB2016W1_01-p-800.jpg 800w, images/LWB2016W1_01-p-1080.jpg 1080w, images/LWB2016W1_01.jpg 1500w" alt="" src="images/LWB2016W1_01.jpg" loading="lazy" class="services-image"></div>
-                    <div class="w-slide"><img sizes="(max-width: 1500px) 100vw, 1500px" srcset="images/39066_02-p-500.jpg 500w, images/39066_02-p-800.jpg 800w, images/39066_02-p-1080.jpg 1080w, images/39066_02.jpg 1500w" alt="" src="images/39066_02.jpg" loading="lazy" class="services-image"></div>
+                    <div class="w-slide"><img sizes="100vw" srcset="images/LWB2016W1_01-p-500.jpg 500w, images/LWB2016W1_01-p-800.jpg 800w, images/LWB2016W1_01-p-1080.jpg 1080w, images/LWB2016W1_01.jpg 1500w" alt="" src="images/LWB2016W1_01.jpg" loading="lazy" class="services-image"></div>
+                    <div class="w-slide"><img sizes="100vw" srcset="images/39066_02-p-500.jpg 500w, images/39066_02-p-800.jpg 800w, images/39066_02-p-1080.jpg 1080w, images/39066_02.jpg 1500w" alt="" src="images/39066_02.jpg" loading="lazy" class="services-image"></div>
                   </div>
                   <div class="w-slider-arrow-left">
                     <div class="icon w-icon-slider-left"></div>
@@ -163,23 +187,23 @@ canvas {
                   <div class="w-slider-arrow-right">
                     <div class="icon w-icon-slider-right"></div>
                   </div>
-                  <div class="w-slider-nav w-round w-num"></div>
+                  <div class="w-slider-nav w-slider-nav-invert w-shadow w-round"></div>
                 </div>
               </div>
-              <div data-w-tab="Tab 2" class="tabs__pane w-tab-pane">
+              <div data-w-tab="Tab 2" class="tabs__pane w-tab-pane w--tab-active">
                 <div data-delay="4000" data-animation="slide" class="slider w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
                   <div class="w-slider-mask">
-                    <div class="w-slide"><img sizes="100vw" srcset="images/35250_02-p-500.jpg 500w, images/35250_02-p-800.jpg 800w, images/35250_02-p-1080.jpg 1080w, images/35250_02.jpg 1500w" alt="" src="images/35250_02.jpg" loading="lazy" class="services-image"></div>
-                    <div class="w-slide"><img sizes="100vw" srcset="images/35251_02-p-500.jpg 500w, images/35251_02-p-800.jpg 800w, images/35251_02-p-1080.jpg 1080w, images/35251_02.jpg 1500w" alt="" src="images/35251_02.jpg" loading="lazy" class="services-image"></div>
-                    <div class="w-slide"><img sizes="100vw" srcset="images/35252_02-p-500.jpg 500w, images/35252_02-p-800.jpg 800w, images/35252_02-p-1080.jpg 1080w, images/35252_02.jpg 1500w" alt="" src="images/35252_02.jpg" loading="lazy" class="services-image"></div>
+                    <div class="w-slide"><img sizes="(max-width: 1500px) 100vw, 1500px" srcset="images/35250_02-p-500.jpg 500w, images/35250_02-p-800.jpg 800w, images/35250_02-p-1080.jpg 1080w, images/35250_02.jpg 1500w" alt="" src="images/35250_02.jpg" loading="lazy" class="services-image"></div>
+                    <div class="w-slide"><img sizes="(max-width: 1500px) 100vw, 1500px" srcset="images/35251_02-p-500.jpg 500w, images/35251_02-p-800.jpg 800w, images/35251_02-p-1080.jpg 1080w, images/35251_02.jpg 1500w" alt="" src="images/35251_02.jpg" loading="lazy" class="services-image"></div>
+                    <div class="w-slide"><img sizes="(max-width: 1500px) 100vw, 1500px" srcset="images/35252_02-p-500.jpg 500w, images/35252_02-p-800.jpg 800w, images/35252_02-p-1080.jpg 1080w, images/35252_02.jpg 1500w" alt="" src="images/35252_02.jpg" loading="lazy" class="services-image"></div>
                   </div>
                   <div class="w-slider-arrow-left">
-                    <div class="w-icon-slider-left"></div>
+                    <div class="icon w-icon-slider-left"></div>
                   </div>
                   <div class="w-slider-arrow-right">
-                    <div class="w-icon-slider-right"></div>
+                    <div class="icon w-icon-slider-right"></div>
                   </div>
-                  <div class="w-slider-nav w-round w-num"></div>
+                  <div class="w-slider-nav w-slider-nav-invert w-shadow w-round"></div>
                 </div>
               </div>
               <div data-w-tab="Tab 3" class="tabs__pane w-tab-pane">
@@ -193,12 +217,12 @@ canvas {
                     <div class="w-slide"><img sizes="100vw" srcset="images/40030_02-p-500.jpg 500w, images/40030_02-p-800.jpg 800w, images/40030_02-p-1080.jpg 1080w, images/40030_02.jpg 1500w" alt="" src="images/40030_02.jpg" loading="lazy" class="services-image"></div>
                   </div>
                   <div class="w-slider-arrow-left">
-                    <div class="w-icon-slider-left"></div>
+                    <div class="icon w-icon-slider-left"></div>
                   </div>
                   <div class="w-slider-arrow-right">
-                    <div class="w-icon-slider-right"></div>
+                    <div class="icon w-icon-slider-right"></div>
                   </div>
-                  <div class="w-slider-nav w-round w-num"></div>
+                  <div class="w-slider-nav w-slider-nav-invert w-shadow w-round"></div>
                 </div>
               </div>
             </div>
@@ -210,102 +234,337 @@ canvas {
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=696540255d12a3651f323d03" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="js/scribbleandscribe.js" type="text/javascript"></script>
   <script>
-  window.addEventListener('DOMContentLoaded', function() {
-    const canvas = document.querySelector("canvas");
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d");
-    const ipadScreen = canvas.closest(".ipad-screen");
-    // Function to get mouse position relative to canvas (accounts for transforms)
-    function getMousePos(e) {
-      const rect = canvas.getBoundingClientRect();
-      const scaleX = canvas.width / rect.width;
-      const scaleY = canvas.height / rect.height;
-      return {
-        x: (e.clientX - rect.left) * scaleX,
-        y: (e.clientY - rect.top) * scaleY
-      };
-    }
-    // Function to set up canvas drawing properties
-    // (These get reset when canvas width/height changes)
-    function setupCanvasContext() {
-      ctx.lineJoin = "round";
-      ctx.lineCap = "round";
-      ctx.lineWidth = 50;
-    }
-    function resizeCanvas() {
-      if (ipadScreen) {
-        const rect = ipadScreen.getBoundingClientRect();
-        // Only update if container is visible and has valid dimensions
-        if (rect.width > 0 && rect.height > 0) {
-          canvas.width = rect.width;
-          canvas.height = rect.height;
-          ctx.fillStyle = "transparent";
-          ctx.fillRect(0, 0, canvas.width, canvas.height);
-          setupCanvasContext(); // Re-apply context properties after resize
-        }
-      } else {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+window.addEventListener('DOMContentLoaded', function() {
+  // ========== CANVAS SETUP ==========
+  const canvas = document.querySelector("canvas");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+  const ipadScreen = canvas.closest(".ipad-screen");
+  // Convert mouse/touch position to canvas coordinates (handles scaling)
+  function getPos(eOrTouch) {
+    const rect = canvas.getBoundingClientRect();
+    const scaleX = canvas.width / rect.width;
+    const scaleY = canvas.height / rect.height;
+    const clientX = eOrTouch.clientX;
+    const clientY = eOrTouch.clientY;
+    return {
+      x: (clientX - rect.left) * scaleX,
+      y: (clientY - rect.top) * scaleY
+    };
+  }
+  // Drawing style (line caps, joins, width)
+  function setupCanvasContext() {
+    ctx.lineJoin = "round";
+    ctx.lineCap = "round";
+    ctx.lineWidth = 8;
+  }
+  // Resize canvas to match its container (ipad-screen) or window
+  function resizeCanvas() {
+    if (ipadScreen) {
+      const rect = ipadScreen.getBoundingClientRect();
+      if (rect.width > 0 && rect.height > 0) {
+        canvas.width = rect.width;
+        canvas.height = rect.height;
         ctx.fillStyle = "transparent";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
-        setupCanvasContext(); // Re-apply context properties after resize
+        setupCanvasContext();
       }
+    } else {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      ctx.fillStyle = "transparent";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      setupCanvasContext();
     }
-    // Wait for DOM and initial layout
-    function initCanvas() {
-      requestAnimationFrame(() => {
-        resizeCanvas();
-        // Try again after a short delay in case Webflow interactions haven't run yet
-        setTimeout(resizeCanvas, 100);
-        setTimeout(resizeCanvas, 500); // Additional delay for 3D scroll animations
-      });
-    }
-    initCanvas();
-    window.addEventListener("resize", resizeCanvas);
-    // Also observe for visibility changes (in case Webflow shows/hides the element)
-    if (ipadScreen && window.MutationObserver) {
-      const observer = new MutationObserver(() => {
-        resizeCanvas();
-      });
-      observer.observe(ipadScreen, { 
-        attributes: true, 
-        attributeFilter: ['style', 'class'] 
-      });
-    }
-    // Set up canvas context properties initially
-    setupCanvasContext();
-    let lastX = 0;
-    let lastY = 0;
-    let isDrawing = false;
-    let currentColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-    function draw(e) {
-      if (!isDrawing) return;
-      const pos = getMousePos(e);
-      ctx.strokeStyle = currentColor;
+  }
+  // Initial size + delayed resizes for Webflow 3D/scroll layout
+  function initCanvas() {
+    requestAnimationFrame(() => {
+      resizeCanvas();
+      setTimeout(resizeCanvas, 100);
+      setTimeout(resizeCanvas, 500);
+    });
+  }
+  initCanvas();
+  window.addEventListener("resize", resizeCanvas);
+  // Re-size canvas when Webflow changes the tablet (e.g. scroll animation)
+  if (ipadScreen && window.MutationObserver) {
+    const observer = new MutationObserver(() => resizeCanvas());
+    observer.observe(ipadScreen, {
+      attributes: true,
+      attributeFilter: ['style', 'class']
+    });
+  }
+  // ========== DRAWING STATE ==========
+  setupCanvasContext();
+  let lastX = 0;
+  let lastY = 0;
+  let isDrawing = false;
+  let useRandomColor = false;  // true when "random" swatch is selected
+  let currentColor = '#1a1a1a';  // default: black
+    // Undo/redo: each stroke = { points: [{x,y}, ...], color, lineWidth }
+  let strokeHistory = [];
+  let redoStack = [];
+  let currentStrokePoints = [];  // points collected during current stroke
+  // Redraw all strokes in history (used after undo, redo, or init)
+  function redrawAll() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.lineJoin = 'round';
+    ctx.lineCap = 'round';
+    strokeHistory.forEach(function(stroke) {
+      if (stroke.points.length < 2) return;
+      ctx.strokeStyle = stroke.color;
+      ctx.lineWidth = stroke.lineWidth;
       ctx.beginPath();
-      ctx.moveTo(lastX, lastY);
-      ctx.lineTo(pos.x, pos.y);
+      ctx.moveTo(stroke.points[0].x, stroke.points[0].y);
+      for (var i = 1; i < stroke.points.length; i++) {
+        ctx.lineTo(stroke.points[i].x, stroke.points[i].y);
+      }
       ctx.stroke();
-      lastX = pos.x;
-      lastY = pos.y;
+    });
+    setupCanvasContext();  // restore default lineWidth
+  }
+  // Draw a line segment from (lastX, lastY) to current pointer position
+  function draw(e) {
+    if (!isDrawing) return;
+    const pos = getPos(e);
+    currentStrokePoints.push({ x: pos.x, y: pos.y });
+    ctx.strokeStyle = currentColor;
+    ctx.beginPath();
+    ctx.moveTo(lastX, lastY);
+    ctx.lineTo(pos.x, pos.y);
+    ctx.stroke();
+    lastX = pos.x;
+    lastY = pos.y;
+  }
+  // Start a new stroke; use random color only if random swatch is active
+  function startDraw(x, y) {
+    isDrawing = true;
+    if (useRandomColor) {
+      currentColor = 'hsl(' + Math.random() * 360 + ', 100%, 50%)';
     }
-    canvas.addEventListener("mousedown", (e) => {
-      if (e.button === 0) { // Left click
-        isDrawing = true;
-        currentColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-        const pos = getMousePos(e);
+    lastX = x;
+    lastY = y;
+    currentStrokePoints = [{ x: x, y: y }];
+  }
+  // End current stroke: save to history and clear redo stack
+  function endStroke() {
+    if (currentStrokePoints.length >= 2) {
+      strokeHistory.push({
+        points: currentStrokePoints.slice(),
+        color: currentColor,
+        lineWidth: ctx.lineWidth
+      });
+      redoStack = [];
+    }
+    currentStrokePoints = [];
+  }
+  // ——— Mouse (desktop) ———
+  canvas.addEventListener("mousedown", function(e) {
+    if (e.button === 0) {
+      const pos = getPos(e);
+      startDraw(pos.x, pos.y);
+    }
+  });
+  canvas.addEventListener("mousemove", draw);
+    canvas.addEventListener("mouseup", function() {
+    endStroke();
+    isDrawing = false;
+  });
+  canvas.addEventListener("mouseout", function() {
+    endStroke();
+    isDrawing = false;
+  });
+  // Right-click: clear canvas
+  canvas.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+    strokeHistory = [];
+    redoStack = [];
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  });
+  // ——— Touch (mobile) ———
+  canvas.addEventListener("touchstart", function(e) {
+    if (e.touches.length > 0) {
+      e.preventDefault();
+      const t = e.touches[0];
+      const pos = getPos({ clientX: t.clientX, clientY: t.clientY });
+      startDraw(pos.x, pos.y);
+    }
+  }, { passive: false });
+  canvas.addEventListener("touchmove", function(e) {
+    if (e.touches.length > 0) {
+      e.preventDefault();
+      const t = e.touches[0];
+      const pos = getPos({ clientX: t.clientX, clientY: t.clientY });
+      if (isDrawing) {
+        ctx.strokeStyle = currentColor;
+        ctx.beginPath();
+        ctx.moveTo(lastX, lastY);
+        ctx.lineTo(pos.x, pos.y);
+        ctx.stroke();
         lastX = pos.x;
         lastY = pos.y;
+        currentStrokePoints.push({ x: pos.x, y: pos.y });
       }
+    }
+  }, { passive: false });
+  canvas.addEventListener("touchend", function() {
+    endStroke();
+    isDrawing = false;
+  }, { passive: true });
+  canvas.addEventListener("touchcancel", function() {
+    endStroke();
+    isDrawing = false;
+  }, { passive: true });
+    // ========== UNDO / REDO / ERASE BUTTONS ==========
+  var undoBtn = document.getElementById('undo-button');
+  var redoBtn = document.getElementById('redo-button');
+  var eraseBtn = document.getElementById('erase-button');
+  if (undoBtn) {
+    undoBtn.addEventListener('click', function() {
+      if (strokeHistory.length === 0) return;
+      redoStack.push(strokeHistory.pop());
+      redrawAll();
     });
-    canvas.addEventListener("mousemove", draw);
-    canvas.addEventListener("mouseup", () => isDrawing = false);
-    canvas.addEventListener("mouseout", () => isDrawing = false);
-    canvas.addEventListener("contextmenu", (e) => {
-      e.preventDefault(); // Prevent the context menu from appearing
-      ctx.fillRect(0, 0, canvas.width, canvas.height); // Clear the canvas
+  }
+  if (redoBtn) {
+    redoBtn.addEventListener('click', function() {
+      if (redoStack.length === 0) return;
+      strokeHistory.push(redoStack.pop());
+      redrawAll();
     });
-  });
+  }
+  if (eraseBtn) {
+    eraseBtn.addEventListener('click', function() {
+      strokeHistory = [];
+      redoStack = [];
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    });
+  }
+  // ========== COLOR PALETTE ==========
+  // Swatches: .palette-container > .palette-swatch (combo: .black, .navy, .random, etc.)
+  // Active state: .palette-swatch-active (style in Webflow)
+  var paletteContainer = document.querySelector('.palette-container');
+  if (paletteContainer) {
+    var swatches = paletteContainer.querySelectorAll('.palette-swatch');
+    // Default: mark black swatch as active on load
+    var blackSwatch = paletteContainer.querySelector('.palette-swatch.black');
+    if (blackSwatch) {
+      blackSwatch.classList.add('palette-swatch-active');
+    } else if (swatches.length > 0) {
+      swatches[0].classList.add('palette-swatch-active');
+    }
+    swatches.forEach(function(swatch) {
+      swatch.addEventListener('click', function() {
+        // Random swatch: new random color each stroke
+        if (swatch.classList.contains('palette-swatch-random') || swatch.classList.contains('random')) {
+          useRandomColor = true;
+          currentColor = 'hsl(' + Math.random() * 360 + ', 100%, 50%)';
+        } else {
+          useRandomColor = false;
+          var color = swatch.getAttribute('data-color') || getComputedStyle(swatch).backgroundColor;
+          if (color) currentColor = color;
+        }
+        // Move active state to clicked swatch
+        swatches.forEach(function(s) { s.classList.remove('palette-swatch-active'); });
+        swatch.classList.add('palette-swatch-active');
+      });
+    });
+  }
+});
+</script>
+  <script>
+// ========== SCREENSHOT / SHARE BUTTON ==========
+// Button: #screen-shot-button. Captures canvas inside #tablet-mockup.
+// Inverts black strokes to white in export so they're visible on light/transparent.
+// Global guard prevents two copies when script runs twice or when using Copy in share sheet.
+(function() {
+  function initScreenshotButton() {
+    var btn = document.getElementById('screen-shot-button');
+    var tabletMockup = document.getElementById('tablet-mockup');
+    if (!btn || !tabletMockup) return;
+    var canvas = tabletMockup.querySelector('canvas');
+    if (!canvas) return;
+    var isCapturing = false;  // prevent double fire (two copies)
+    // Build export image: copy canvas and invert black/dark strokes to white
+    function getExportCanvas(sourceCanvas) {
+      var w = sourceCanvas.width;
+      var h = sourceCanvas.height;
+      var off = document.createElement('canvas');
+      off.width = w;
+      off.height = h;
+      var offCtx = off.getContext('2d');
+      offCtx.drawImage(sourceCanvas, 0, 0);
+      var imgData = offCtx.getImageData(0, 0, w, h);
+      var d = imgData.data;
+      var darkThreshold = 80;   // treat as "black" stroke
+      var alphaThreshold = 64; // only change drawn pixels
+      for (var i = 0; i < d.length; i += 4) {
+        var r = d[i];
+        var g = d[i + 1];
+        var b = d[i + 2];
+        var a = d[i + 3];
+        if (a > alphaThreshold && r < darkThreshold && g < darkThreshold && b < darkThreshold) {
+          d[i] = 255;
+          d[i + 1] = 255;
+          d[i + 2] = 255;
+        }
+      }
+      offCtx.putImageData(imgData, 0, 0);
+      return off;
+    }
+    function downloadImage(url) {
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = 'scribble-and-scribe.png';
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+    btn.addEventListener('click', function() {
+      if (window.__scribbleCaptureInProgress) return;
+      window.__scribbleCaptureInProgress = true;
+      if (isCapturing) return;
+      isCapturing = true;
+      var exportCanvas = getExportCanvas(canvas);
+      exportCanvas.toBlob(function(blob) {
+        if (!blob) {
+          isCapturing = false;
+          window.__scribbleCaptureInProgress = false;
+          return;
+        }
+        var file = new File([blob], 'scribble-and-scribe.png', { type: 'image/png' });
+        var url = URL.createObjectURL(blob);
+        if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
+          navigator.share({
+            title: 'Scribble & Scribe',
+            text: 'My scribble from Scribble & Scribe ' + window.location.href,
+            files: [file]
+          }).then(function() {
+            URL.revokeObjectURL(url);
+          }).catch(function(err) {
+            if (err.name === 'AbortError') {
+              URL.revokeObjectURL(url);
+            } else {
+              downloadImage(url);
+            }
+          }).finally(function() {
+            isCapturing = false;
+            window.__scribbleCaptureInProgress = false;
+          });
+        } else {
+          downloadImage(url);
+          isCapturing = false;
+          window.__scribbleCaptureInProgress = false;
+        }
+      }, 'image/png');
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initScreenshotButton);
+  } else {
+    initScreenshotButton();
+  }
+})();
 </script>
 </body>
 </html>
