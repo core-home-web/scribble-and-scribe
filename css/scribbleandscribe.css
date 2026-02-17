@@ -107,9 +107,7 @@ p {
 }
 
 a {
-  opacity: .5;
   color: #fff;
-  mix-blend-mode: difference;
   font-size: 1em;
   text-decoration: none;
 }
@@ -471,7 +469,7 @@ figcaption {
 }
 
 .p-xl-start {
-  padding-top: 8.5em;
+  padding-top: 0;
 }
 
 .p-xl-start.p-xl-end {
@@ -480,6 +478,7 @@ figcaption {
 
 .tablet-mockup-animation {
   z-index: 2;
+  margin-bottom: 10px;
   position: relative;
 }
 
@@ -491,7 +490,9 @@ figcaption {
 }
 
 .container-w2.gutter-outside {
+  flex-flow: column;
   margin-bottom: 220px;
+  display: flex;
 }
 
 .wow-heading {
@@ -515,14 +516,14 @@ figcaption {
 }
 
 .section-tablet-scroll-animation {
-  background-image: linear-gradient(#ddb4be, #e7d9d9 80%, #fff);
+  background-image: linear-gradient(#ddb4be, #e7d9d9 88%, #fff);
   overflow: hidden;
 }
 
 .ipad-mockup {
   border: 3px solid #0000004f;
   border-radius: 2em;
-  max-height: 90vh;
+  max-height: 88vh;
   position: relative;
   overflow: hidden;
   box-shadow: 0 2px 8em #3d09094a;
@@ -631,9 +632,8 @@ figcaption {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  margin-bottom: 6.3rem;
   padding-left: 0;
-  padding-right: 12vw;
+  padding-right: 0;
   display: grid;
 }
 
@@ -703,7 +703,6 @@ figcaption {
   grid-auto-columns: 1fr;
   align-items: center;
   width: 100%;
-  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   display: grid;
@@ -809,9 +808,8 @@ figcaption {
 }
 
 .services-image {
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 1.4em;
-  width: 58rem;
 }
 
 .tab-paragraph {
@@ -826,7 +824,13 @@ figcaption {
 
 .slider {
   background-color: #fff;
-  height: 60vh;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  max-height: 60vh;
+  padding-top: 0;
+  padding-bottom: 0;
+  display: flex;
 }
 
 .icon {
@@ -1005,11 +1009,13 @@ figcaption {
   letter-spacing: 2px;
   text-transform: uppercase;
   background-color: #ffecec;
+  border-radius: 12px;
   padding: 12px 25px;
   font-size: 12px;
   font-weight: 700;
   line-height: 20px;
   transition: all .2s;
+  box-shadow: 0 2px 1em #0000002e;
 }
 
 .button-primary:hover {
@@ -1021,8 +1027,96 @@ figcaption {
   background-color: #43464d;
 }
 
+.button-primary.screenshot {
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
 .text-span {
   color: #393d47;
+  transition: all .2s;
+}
+
+.text-span:hover {
+  color: #9b2299;
+}
+
+.palette-container {
+  grid-column-gap: 12px;
+  grid-row-gap: 12px;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 40rem;
+  margin-bottom: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 12px;
+  display: flex;
+}
+
+.palette-swatch {
+  cursor: pointer;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  transition: all .25s;
+  position: relative;
+  box-shadow: 0 2px 15px .2em #0003;
+}
+
+.palette-swatch:hover {
+  box-shadow: 0 2px 15px .8em #fffffff0;
+}
+
+.palette-swatch:active {
+  border: 3px solid #fff;
+  box-shadow: 0 2px 15px .8em #fff;
+}
+
+.palette-swatch:focus {
+  border: 4px solid #fff;
+  box-shadow: 0 2px 15px .8em #fff;
+}
+
+.palette-swatch.palette-swatch-random {
+  background-image: linear-gradient(309deg, red 5%, #ff7500 17%, #ffc800 29%, #0f0 41%, #00ffc4 54%, #8591e8 65%, #f0e 81%, #ff0004 96%);
+}
+
+.palette-swatch.black {
+  background-color: #1a1a1a;
+}
+
+.palette-swatch.black:active {
+  border: 5px solid var(--base-color-neutral--white);
+  box-shadow: 0 2px 15px .2em #ffffffc2;
+}
+
+.palette-swatch.navy {
+  background-color: #3b82f6;
+}
+
+.palette-swatch.pink {
+  background-color: #ec4899;
+}
+
+.palette-swatch.teal {
+  background-color: #14b8a6;
+}
+
+.palette-swatch.red {
+  background-color: #ef4444;
+}
+
+.palette-swatch.gold {
+  background-color: #f59e0b;
+}
+
+.palette-swatch.green {
+  background-color: #10b981;
 }
 
 @media screen and (max-width: 991px) {
@@ -1156,6 +1250,10 @@ figcaption {
     padding-top: 6em;
   }
 
+  .tablet-mockup-animation {
+    margin-bottom: 10px;
+  }
+
   .wow-animation {
     font-size: .7em;
   }
@@ -1247,6 +1345,10 @@ figcaption {
   .mobile-margin-top-10 {
     margin-top: 10px;
   }
+
+  .palette-container {
+    margin-bottom: 24px;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -1309,6 +1411,10 @@ figcaption {
 
   .menu-button {
     color: #000;
+  }
+
+  .palette-container {
+    max-width: 60rem;
   }
 }
 
