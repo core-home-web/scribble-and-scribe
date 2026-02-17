@@ -1,0 +1,104 @@
+# Scribble & Scribe - Webflow Export Project Rules
+
+## Project Context
+This is a Webflow export project that will periodically receive new exports from Webflow. The project primarily consists of HTML, CSS, and JavaScript files.
+
+## Code Style & Conventions
+
+### HTML
+- Maintain Webflow-generated HTML structure and data attributes (`data-wf-*`, `data-w-id`, etc.)
+- Preserve Webflow class naming conventions (`w-*` classes)
+- Keep inline styles and embedded scripts when they're part of Webflow exports
+- Document any custom modifications clearly with comments
+
+### CSS
+- Preserve Webflow-generated CSS structure
+- Maintain CSS custom properties/variables as defined in `scribbleandscribe.css`
+- When adding custom styles, use clear naming conventions and avoid conflicts with Webflow classes
+- Keep component-specific styles organized
+
+### JavaScript
+- Preserve Webflow interactions and scripts
+- Custom JavaScript (like canvas drawing) should be clearly separated and documented
+- Use modern JavaScript practices for any new code
+- Maintain compatibility with Webflow's jQuery-based interactions
+
+## Handling Webflow Exports
+
+### When New Exports Arrive
+1. **Review Changes**: Compare new export with current version to identify:
+   - New files to add
+   - Files that should be overwritten
+   - Files that contain custom modifications (preserve these)
+
+2. **File Overwrite Strategy**:
+   - **Safe to Overwrite**: Standard Webflow-generated files (HTML, CSS, JS) unless they contain custom modifications
+   - **Preserve**: Files with custom code (e.g., canvas drawing functionality in `index.html`)
+   - **Archive**: Keep old versions in `old-*` files for reference
+
+3. **Custom Modifications**:
+   - Document all custom code additions clearly
+   - Use comments to mark custom sections: `<!-- CUSTOM: [description] -->`
+   - Keep custom code modular and easy to identify
+
+### File Organization
+- HTML files: Root directory
+- CSS files: `css/` directory
+- JavaScript files: `js/` directory
+- Images: `images/` directory
+- Archived versions: Keep with `old-` prefix
+
+## Development Guidelines
+
+### Before Making Changes
+- Check if the file is Webflow-generated or custom
+- Review existing custom modifications
+- Ensure changes won't conflict with future Webflow exports
+
+### Code Modifications
+- Add clear comments explaining custom code
+- Use consistent formatting
+- Test changes across different browsers
+- Maintain responsive design principles
+
+### Git Workflow
+- Commit Webflow exports separately from custom modifications
+- Use descriptive commit messages
+- Tag major Webflow export versions if needed
+
+## Key Features to Preserve
+
+### Canvas Drawing Functionality
+- Located in `index.html` (lines ~213-308)
+- Custom canvas drawing with color randomization
+- Responsive canvas sizing
+- Right-click to clear functionality
+
+### Webflow Interactions
+- Preserve all `data-w-*` attributes
+- Maintain Webflow slider and tab functionality
+- Keep animation triggers intact
+
+## Best Practices
+
+1. **Never modify Webflow-generated code unnecessarily** - changes may be overwritten
+2. **Document all custom additions** - makes future exports easier to merge
+3. **Test after each export** - ensure custom features still work
+4. **Keep backups** - archive important versions before major changes
+5. **Use semantic HTML** - maintain accessibility standards
+
+## Common Tasks
+
+### Adding New Features
+- Add custom JavaScript in separate files or clearly marked sections
+- Use CSS custom properties for theming
+- Ensure mobile responsiveness
+
+### Updating Content
+- For content changes, prefer updating in Webflow and re-exporting
+- For quick fixes, document changes clearly
+
+### Performance Optimization
+- Optimize images before committing
+- Minify custom JavaScript/CSS if needed (but preserve originals)
+- Use Webflow's built-in optimization features
